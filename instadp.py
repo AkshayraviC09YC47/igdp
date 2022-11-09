@@ -34,7 +34,7 @@ if not any((username,u_list)):
 
 if username:
 	print(banner)
-	print(f"Downloading {username} profile picture, please wait....")
+	print(f"--> Downloading {username} profile picture, please wait....")
 	Instaloader().download_profile(username, profile_pic_only=True)
 
 if u_list:
@@ -42,6 +42,6 @@ if u_list:
 	with open(u_list,'r') as f:
 		for line in f:
 			for word in line.split():
-				print(f"Downloading {word} profile picture, please wait....")
+				print(f"--> Downloading {word} profile picture, please wait....")
 				Instaloader().download_profile(word, profile_pic_only=True)
 				print("-"*50)
